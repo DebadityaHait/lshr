@@ -11,7 +11,7 @@ export async function GET(
   const stream = new ReadableStream({
     async start(controller) {
       // Helper function to send SSE message
-      const sendMessage = (data: any) => {
+      const sendMessage = (data: Record<string, unknown>) => {
         const message = `data: ${JSON.stringify(data)}\n\n`;
         controller.enqueue(encoder.encode(message));
       };

@@ -108,6 +108,7 @@ export default function Home() {
         eventSource.close();
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getTimeRemaining = () => {
@@ -126,6 +127,7 @@ export default function Home() {
     }, 1000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
 
   return (

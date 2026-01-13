@@ -33,7 +33,7 @@ export async function POST(
     let sanitizedUrl: string;
     try {
       sanitizedUrl = sanitizeUrl(link);
-    } catch (error) {
+    } catch {
       return NextResponse.json(
         { error: 'Invalid URL protocol' },
         { status: 400 }
